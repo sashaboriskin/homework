@@ -1,0 +1,6 @@
+a = int(input())
+i = 0
+b = " "
+for i in range (a+1):
+    b = b + str(i)
+    print(b)
