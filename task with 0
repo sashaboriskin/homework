@@ -4,4 +4,5 @@ while True:
   numbers = int(input())
   i+=1
   if numbers == 0:
-    print(i)
+    break
+print(i)
