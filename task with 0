@@ -1,0 +1,7 @@
+n = int(input())
+i = 0
+while True:
+  numbers = int(input())
+  i+=1
+  if numbers == 0:
+    print(i)
