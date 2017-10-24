@@ -1,0 +1,5 @@
+print("Enter the string:")
+str = input()
+numa = str.count('b')
+print(numa)
+input()
