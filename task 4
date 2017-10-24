@@ -1,0 +1,5 @@
+print("Enter the string")
+string = input()
+
+new_strring = string.replace("1", "one")
+print(new_strring)
