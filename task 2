@@ -4,3 +4,4 @@ simvol = char(input())
 for i in range (len(string)):
   if string[i] == simvol:
     print (i)
+  i+=1
