@@ -1,0 +1,8 @@
+a = int(input())
+b = int(input())
+l = int(input())
+N = int(input())
+
+x = sqrt(a*a + b*b)
+long = (N - 1)*a*2 + 2*l + b
+print(long)
