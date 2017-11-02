@@ -1,0 +1,7 @@
+n = int(input("Enter the number:")) 
+a = [] 
+for i in range(n): 
+  a.append(int(input("Enter the new element:"))) 
+
+for g in range(n): 
+ print(a[g], "items", a.count(a[g]))
