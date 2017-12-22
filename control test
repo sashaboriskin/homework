@@ -1,0 +1,28 @@
+n = int(input())
+k = int(input())
+r = int(input())
+m = int(input())
+
+if n>k:
+    if m == 2:
+        v = r * n
+        v1 = v
+        if v < k :
+            while v < k:
+                v = v - k
+    else:
+        v = (r * 2) - 1
+        while v < k:
+            v = v - k
+
+else:
+    print('-1')
+
+for i in range(n):
+    if i%2 == 0:
+        if i>k:
+            v2 = i
+            v2 = v2 - k
+            while: 
+        else:
+            v2 = i
