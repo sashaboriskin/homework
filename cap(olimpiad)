@@ -1,0 +1,23 @@
+NM = input()
+TTT=NM.split(' ')
+  
+N = int(TTT[0])
+M = int(TTT[1])
+points = [0] * N
+all_index = []
+all_words = []                                                                                        
+guess_words = []
+for j in range(M):
+  str = input()
+  string = str.split(' ')
+  all_index.append(int(string[0])-1)
+  all_words.append(string[1])
+
+for i in range(M-1, 0,-1): 
+  if all_words[i] in guess_words:
+    continue
+  points[ all_index[i] ] += 1
+  guess_words.append(all_words[i])
+  
+    
+print(points)
