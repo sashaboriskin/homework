@@ -1,6 +1,16 @@
-'''
-inputy vvedi 
-'''
+N = int(input())
+M = int(input())
+A = []
+
+for k in range(M):       
+  string = input()       
+  c = string.split(' ')  
+  for i in range(len(c)):
+    c[i] = int(c[i])     
+  A.append(c)            
+
+a = int(input())
+b = int(input())
 
 def fff(A, a, b, n):
     if n == 0:
@@ -12,7 +22,7 @@ def fff(A, a, b, n):
         for l in range(len(A)):
             if a in A[l]:
                 for h in range(len(A[l])): 
-                    B = A.remove[l] #???
+                    B = A.pop[l] 
                     if fff(B, A[l][h], b, n-1):
                         return True
 
