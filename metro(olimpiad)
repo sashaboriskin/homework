@@ -1,7 +1,7 @@
 def recurse(A, a, b, n):
   if n == 0:
     for l in range(len(A)):
-      if a in A[l] and b in A[l]:
+      if a in A[l]: # and b in A[l]:
         return True
   else:
     for l in range(len(A)):
@@ -22,9 +22,11 @@ for k in range(M):
   c = string.split(' ')  
   for i in range(len(c)):
     c[i] = int(c[i])     
-  A.append(c)            
-a = int(input())
-b = int(input())
+  c = c[1:]
+  
+  A.append(c)    
+
+a, b =  (int(val) for val in input().split())
 
 nodes = -1
 for i in range(M):
