@@ -1,7 +1,7 @@
 def recurse(A, a, b, n):
   if n == 0:
     for l in range(len(A)):
-      if a in A[l]: # and b in A[l]:
+      if a in A[l] and b in A[l]:
         return True
   else:
     for l in range(len(A)):
