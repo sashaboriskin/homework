@@ -1,51 +1,95 @@
 from tkinter import *
-from tkinter import messahebox
+from tkinter import messagebox
 
 
 def show_message():
-    messagebox.showinfo("sashka", message.get())
+  messagebox.showinfo("sashka", message.get())
 
 def string(n):
-    if n == 0:
-        print("ноль")
-    units = [' ', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять']
-    dozens = [' ', 'десять', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят',
+  if n == 0:
+    print("ноль")
+  units = [' ', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять']
+  dozens = [' ', 'десять', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят',
               'девяносто']
-    hundreds = [' ', 'сто', 'двести', 'триста', 'четыресто', 'пятьсот', 'шестьсот', 'семьсот', 'восемьсот', 'девятьсот']
-    thousands = [' ', 'одна тысяча', 'две тысячи', 'три тысячи', 'четыре тысячи', 'пять тысяч', 'шесть тысяч',
+  hundreds = [' ', 'сто', 'двести', 'триста', 'четыресто', 'пятьсот', 'шестьсот', 'семьсот', 'восемьсот', 'девятьсот']
+  thousands = [' ', 'одна тысяча', 'две тысячи', 'три тысячи', 'четыре тысячи', 'пять тысяч', 'шесть тысяч',
                  'семь тысяч', 'восемь тысяч', 'девять тысяч']
-    tricks = [' ', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестьнадцать',
+  tricks = [' ', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестьнадцать',
               'семьнадцать', 'восемьнадцать', 'девятьнадцать']
-    new_thousands = (n % 10000) // 1000
-    new_hundreds = (n % 1000) // 100
-    new_dozens = (n % 100) // 10
-    new_units = n % 10
+  new_thousands = (n % 10000) // 1000
+  new_hundreds = (n % 1000) // 100
+  new_dozens = (n % 100) // 10
+  new_units = n % 10
     
-    '''
-    w = 1  # w = tricks[1] = 11
-    ww = 2  # ww = tricks[2] = 12
-    www = 3  # www = tricks[3] = 13
-    q = 4  # q = tricks[4] = 14
-    qq = [ 5, 15, tricks[5] ]  # q = tricks[5] = 15
-
-    '''
-    
-    if len(str(n)) == 1:
-        print(units[new_units])
-    elif len(str(n)) == 2:
-        print(dozens[new_dozens], units[new_units])
-    elif len(str(n)) == 3:
-        print(hundreds[new_hundreds], dozens[new_dozens], units[new_units])
-    elif len(str(n)) == 4:
-        #c = n  # например c = 1215
-        #g = str(c)  # g = '1215'
-        #b = g[2] + g[3]  # b = '15'
-        #b = int(b)  # b = 15       
-        #if b == 11 or 12 or 13 or 14 or 15 or 16 or 17 or 18 or 19:
-            
-
-        print(thousands[new_thousands], hundreds[new_hundreds], dozens[new_dozens], units[new_units])
-
+  if len(str(n)) == 1:
+    print(units[new_units])
+  elif len(str(n)) == 2:
+    if n == 11:
+      print(tricks[1])
+    elif n == 12:
+      print(tricks[2])
+    elif n == 13:
+      print(tricks[3])
+    elif n == 14:
+      print(tricks[4])        
+    elif n == 15:
+      print(tricks[5])        
+    elif n == 16:
+      print(tricks[6])        
+    elif n == 17:
+      print(tricks[7])        
+    elif n == 18:
+      print(tricks[8])
+    elif n == 19:
+      print(tricks[9])
+    else:
+      print(dozens[new_dozens], units[new_units])
+  elif len(str(n)) == 3:
+    b = str(n)
+    s = b[1] + b[2]
+    if s == 11:
+      print(hundreds[new_hundreds], tricks[1])
+    elif s == 12:
+      print(hundreds[new_hundreds], tricks[2])
+    elif s == 13:
+      print(hundreds[new_hundreds], tricks[3])        
+    elif s == 14:
+      print(hundreds[new_hundreds], tricks[4])        
+    elif s == 15:
+      print(hundreds[new_hundreds], tricks[5])        
+    elif s == 16:
+      print(hundreds[new_hundreds], tricks[6])        
+    elif s == 17:
+      print(hundreds[new_hundreds], tricks[7])        
+    elif s == 18:
+      print(hundreds[new_hundreds], tricks[8])        
+    elif s == 19:
+      print(hundreds[new_hundreds], tricks[9])        
+    else:
+      print(hundreds[new_hundreds], dozens[new_dozens], units[new_units])
+  elif len(str(n)) == 4:
+    v = str()  
+    m = v[2] + v[3]        
+    if m == 11:
+      print(thousands[new_thousands], hundreds[new_hundreds], tricks[1])
+    elif m == 12:  
+      print(thousands[new_thousands], hundreds[new_hundreds], tricks[2])
+    elif m == 13:  
+      print(thousands[new_thousands], hundreds[new_hundreds], tricks[3])
+    elif m == 14:  
+      print(thousands[new_thousands], hundreds[new_hundreds], tricks[4])
+    elif m == 15:  
+      print(thousands[new_thousands], hundreds[new_hundreds], tricks[5])
+    elif m == 16:  
+      print(thousands[new_thousands], hundreds[new_hundreds], tricks[6])
+    elif m == 17:  
+      print(thousands[new_thousands], hundreds[new_hundreds], tricks[7])
+    elif m == 18:  
+      print(thousands[new_thousands], hundreds[new_hundreds], tricks[8])
+    elif m == 19:  
+      print(thousands[new_thousands], hundreds[new_hundreds], tricks[9])
+    else:
+      print(thousands[new_thousands], hundreds[new_hundreds], dozens[new_dozens], units[new_units])
 
 
 window = Tk()
