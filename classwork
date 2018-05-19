@@ -1,5 +1,0 @@
-first_number = input()
-c = first_number.find(' ')
-d = first_number[:c]
-m = first_number[c:]
-print(m+d)
