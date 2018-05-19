@@ -1,7 +1,0 @@
-str = input("Enter the string: ")
-
-while len(str) >= 1:
-  new_str = str.replace(str[0], "")
-  answer = len(str) - len(new_str)
-  print(str[0], ":", answer)
-  str = new_str
