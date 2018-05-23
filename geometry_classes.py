@@ -3,11 +3,6 @@ class geofigur:
         self.height = height
         self.base = base
 
-class trapeze(geofigur):
-  def second_base(self, base2):
-    self.base2 = base2
-  
-
 class triangle(geofigur):
   def paint(self):
     for i in range(self.height): 
@@ -26,8 +21,20 @@ class rectangle(geofigur):
       print(str)
 
 
+class trapeze(geofigur, triangle, rectangle):
+  def second_base(self, base2):
+    self.base2 = base2
+  def paint(self):
+    tr = triangle(self.base - self.base2, self.height)
+    re = rectangle(self.base2, self.height)
+
+
+
 fff = triangle(4, 5)
 fff.paint()
 
 ddd = rectangle(5, 4)
 ddd.paint()
+
+ttt = trapeze(4, 5, 6)
+ttt.paint()
