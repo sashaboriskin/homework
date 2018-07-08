@@ -1,27 +1,20 @@
-def sum_array(a):
-  summ = 0
-  for i in a:
-    summ = summ + i
-  return summ
+#cur_list - current list to add values 
+#recurseCount - recurrent decreasing counter - N
+#prevValue - last i value from previous recursion 
+#valToComp - value we need to get - K
+def calc(cur_list, recurseCount, prevValue, valToComp): 
+  for i in range (prevValue+1, valToComp): 
+    new_list = cur_list[:]
+    new_list.append(i) 
 
-n = 12
-k = 3
+    if recurseCount > 1: 
+      calc(new_list, recurseCount-1, i, valToComp) 
+    else: 
+      if sum(new_list) == valToComp: 
+        print(new_list) 
 
-for i in range(n):
-  new_spisok = []
-  if i != 0:
-    new_spisok.append(i)
-  for j in range(n):
-    if j != i:
-      if j != 0:
-        new_spisok.append(j)
-    else:
-      continue
-    for l in range(n):
-      if l !=j :
-        if l != 0:
-          new_spisok.append(l)
-      else:
-        continue
-      if sum_array(new_spisok) == 12:
-        print(new_spisok)
+prev_value = -1 
+valToComp = 12 
+recurseCount = 3 
+cur_list = [] 
+calc(cur_list, recurseCount, prev_value, valToComp)
